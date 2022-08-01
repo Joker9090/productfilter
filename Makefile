@@ -4,13 +4,13 @@ start: stop
 stop:
 	docker-compose stop
 	docker-compose down --volumes --remove-orphans
-	@docker rm pokedex || true
+	@docker rm productfilter || true
 
 ps:
 	docker-compose ps
 
 logs:
-	docker-compose logs -f pokedex
+	docker-compose logs -f productfilter
 
 shell:
-	docker exec -it pokedex ash
+	docker exec -it productfilter ash

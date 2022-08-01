@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import { connect } from "react-redux";
+import { Header } from '../components/Header';
+import { ProductList } from '../components/ProductList';
 import { getProduct, getProducts, MainReduxActions, removeProduct, setProduct } from '../redux/actions/main';
 import { MainReduxState } from '../redux/reducers/main';
 
@@ -28,9 +30,9 @@ const Home = ({ activeProduct, products, getProducts }: MainReduxState & MainRed
         <meta name="description" content="Product Filter" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <main>
-       
+        <ProductList products={products} />
       </main>
     </div>
   )
