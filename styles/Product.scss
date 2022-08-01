@@ -1,0 +1,135 @@
+.ProductRow {
+  margin: 14px auto !important;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgb(233, 233, 233);
+  cursor: pointer;
+  position: relative;
+  .ProductRowHover {
+    padding: 0px;
+    right: 0px;
+    margin: auto;
+    top: 0px;
+    width: auto;
+    display: flex;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 20px solid transparent;
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+  }
+  &:hover {
+    .ProductRowHover {
+      opacity: 1;
+    }
+  }
+
+  .ProductPartImage {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    top: 0px;
+    position: relative;
+    &:hover {
+      .ProductPartId {
+        opacity: 0.7;
+      }
+    }
+    .ProductPartId {
+      transition: all 0.2s ease;
+      position: absolute;
+      color: white;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      opacity: 0.2;
+    }
+  }
+  .ProductPartTitle {
+    margin-top: 8px;
+  }
+  .ProductPartBullets {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .ProductPartDescription {
+  }
+  .ProductPartPriceAndServer {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.ProductList,
+.ProductListShimer {
+  background: red;
+  height: $productsListSize;
+  overflow-y: scroll;
+  position: relative;
+}
+.ProductFilter,
+.ProductFilterShimer {
+  padding: 6px;
+  padding-right: 18px;
+  height: $filterSize;
+  display: flex;
+  align-items: center;
+  background: rgb(233, 233, 233);
+  border-radius: 4px;
+}
+
+.Price {
+  span {
+    font-weight: bold;
+    &:nth-child(1) {
+      font-size: 12px;
+      top: -2px;
+      position: relative;
+      margin-right: 2px;
+    }
+    &:nth-child(2) {
+      font-size: 20px;
+    }
+    &:nth-child(3) {
+      font-size: 14px;
+    }
+    &:nth-child(4) {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Mobile Configuration */
+@media screen and (max-width: 768px) {
+  .ProductPartImage {
+    min-height: 200px;
+  }
+}
+
+/* Shimmer Logic */
+.ProductFilterShimer {
+  .ShimerBox {
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+    border-radius: 2px;
+  }
+}
+
+/* Shimmer Logic */
+.ProductListShimer {
+  .ShimerBox {
+    margin: 14px auto !important;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(233, 233, 233);
+    min-height: 200px;
+  }
+}

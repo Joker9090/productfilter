@@ -1,0 +1,5 @@
+$headerSize: 40px;
+$filterSize: 60px;
+$headerPlusFilter: calc(#{$headerSize} + #{$filterSize});
+$layoutSize: calc(100vh - #{$headerSize});
+$productsListSize: calc(100vh - #{$headerPlusFilter});

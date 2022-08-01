@@ -1,0 +1,39 @@
+.ServerLabel {
+  padding: 2px 8px;
+  border-radius: 18px;
+  margin: 4px;
+  font-size: 10px;
+  min-width: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 4px grey;
+  color: black;
+  background: white;
+  border: 2px solid transparent;
+  p {
+    margin: 0px;
+  }
+  &.BulletCategory0 {
+    background-color: red;
+  }
+  &.BulletCategory1 {
+    background-color: green;
+  }
+  &.BulletCategory2 {
+    background-color: yellow;
+  }
+  &.BulletCategory3 {
+    background-color: beige;
+  }
+  &.BulletCategory4 {
+    background-color: saddlebrown;
+  }
+  &.BulletCategory5 {
+    background-color: brown;
+  }
+  &.BulletCategory6 {
+    background-color: orange;
+  }
+  &:nth-child(1) {
+    border: 2px solid black;
+  }
+}

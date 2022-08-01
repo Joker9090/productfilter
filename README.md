@@ -17,6 +17,11 @@
 - Cypress
 - styled
 - Docker
+- ![Intermock](https://github.com/google/intermock)
+
+
+## intermock
+Mocked data generated With intermock 
 
 ## linter
 There is a eslinter config for a pretty code =)
@@ -59,13 +64,24 @@ NEXT_PUBLIC_API_URI=
 ```
 
 ## TO IMPROVE
+- Colors
+- Animated Shimmers
+- Selectors
+- Modal For Editing
+- Modal For Create
+- Positibility of delete LOCAL-PRODUCTS
+- Test Cases  
 
 
 ## Coments 
-- 
-- 
+- The Mock Service is in service.tsx file > Inside there is a Class ServiceApi who works as a singleton { GetProductPromise, GetProductsPromise} 
+- Running `make mock` will generate new 9 mocked files inside mock folder, but I change image src for make ProductRow prittier
+- In ProductRow I use `Array.from(new Set([category, ...subCategories].map(i => i.type)))` to make sure of dont have a duplicate category|subcategory
+- The General Idea was handle 2 differnts groups of products { SERVER-PRODUCTS & LOCAL-PRODUCTS } >
+```SERVER-PRODUCTS => Products from endpoint
+LOCAL-PRODUCTS => Products from localStorage, this products can be deleted, the otherones no.```
 
 ## Learn More
-- Time-Spent = 3 hours
+- Time-Spent = 7 hours
 - Time-Spent-pretends = 12 hours
 

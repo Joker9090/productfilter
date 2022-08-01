@@ -24,3 +24,14 @@ a {
     background: black;
   }
 }
+
+.layout {
+  height: $layoutSize;
+  position: relative;
+}
+
+.shimmer {
+  height: "56px";
+  width: "56px";
+  border-radius: "50%";
+}

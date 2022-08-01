@@ -13,14 +13,17 @@
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
-    "next": "12.2.3",
-    "react": "18.2.0",
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
+    "intermock": "^0.2.5",
+    "next": "12.2.3",
     "next-redux-wrapper": "^7.0.5",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "18.2.0",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
-    "react-dom": "18.2.0",
     "sass": "^1.54.0",
     "uuid": "^8.3.2"
   },

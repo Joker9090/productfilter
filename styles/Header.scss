@@ -1,0 +1,9 @@
+.Header {
+  height: $headerSize;
+  align-items: center;
+  display: flex;
+  h1 {
+    margin: auto;
+    font-size: 22px;
+  }
+}
