@@ -17,7 +17,7 @@ export const ProductRow = ({ product, setActiveProduct }: { product: Product, se
         </div>
       </Col>
       <Col xs={12} md={8}>
-        <div className="ProductPartTitle"><h5>{hugeText(title, 25)}</h5></div>
+        <div className="ProductPartTitle"><h5>{hugeText(title, 40)}</h5></div>
         <div className="ProductPartBullets">
           {Array.from(new Set([category, ...subCategories].map(i => i.type))).map((b, index) => <Bullet key={`bullet-${b}-${index}`} onClick={null} value={b} />)}
         </div>

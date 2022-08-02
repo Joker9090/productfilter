@@ -2,10 +2,10 @@ import { Product } from "../../models/Product";
 import * as t from "../types";
 export enum ServerFetching { IDLE, FETCH, FETCHING, FETCH_ERROR }
 export type FilterObject = {
-  id: string,
-  price: string,
-  title: string,
-  description: string,
+  query: string,
+  categories: string,
+  categoriesOptions: string,
+  serverTypes: string,
 }
 
 export type MainReduxState = {
@@ -23,7 +23,12 @@ const GlobalState: MainReduxState = {
   productStatus: ServerFetching.IDLE,
   productsFiltered: [],
   activeProduct: null,
-  filterObject: { id: "", price: "", title: "", description: "" }
+  filterObject: { 
+    query: "", 
+    categories: "", 
+    categoriesOptions: "", 
+    serverTypes: "",
+  }
 };
 
 const main = (state = GlobalState, action: any) => {
@@ -63,9 +68,14 @@ const main = (state = GlobalState, action: any) => {
       }
     case t.FILTER_PRODUCTS:
       const filterObject = action.payload as FilterObject;
+      const products = state.productsFiltered;
+      let categoriesOptions = "";
+      products.forEach(product => (categoriesOptions += `${[product.subCategories.map(s => s.type), product.category.type].join(",")},`))
+      filterObject.categoriesOptions = Array.from(new Set(categoriesOptions.slice(0, -1).split(","))).join(",");
+      console.log(filterObject)
       return {
         ...state,
-        filterObject: filterObject,
+        filterObject: { ...filterObject },
         productsFiltered: [...state.products].filter(i => i.isFiltered(filterObject)),
       }
     case t.SET_PRODUCT:

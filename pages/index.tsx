@@ -30,7 +30,6 @@ const mapDispatchToProps = {
 
 const Home = ({ productsStatus, productStatus, filterObject, activeProduct, products, getProducts, filterProducts }: MainReduxState & MainReduxActions) => {
   const [_activeProduct, setActiveProduct] = React.useState(activeProduct);
-
   React.useEffect(() => {
     getProducts();
   }, []);
@@ -47,7 +46,7 @@ const Home = ({ productsStatus, productStatus, filterObject, activeProduct, prod
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {productsStatus == ServerFetching.FETCHING ? (
+      {productsStatus != ServerFetching.FETCH ? (
         <main className="layout">
           <ProductFilterShimer />
           <ProductListShimer />

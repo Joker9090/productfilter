@@ -62,16 +62,19 @@ Create a local .env file with the following variables
 ```
 NEXT_PUBLIC_API_URI=
 ```
-
 ## TO IMPROVE
 - Colors
-- Animated Shimmers
-- Selectors
+- Images
 - Modal For Editing
 - Modal For Create
 - Positibility of delete LOCAL-PRODUCTS
+- Positibility of save LOCAL-PRODUCTS
+- Positibility of edit LOCAL-PRODUCTS
 - Test Cases  
-
+- Layout Options [
+  LEFT, CENTER, FULL SCREEN
+  - sort of dashboard concept in the back
+]
 
 ## Coments 
 - The Mock Service is in service.tsx file > Inside there is a Class ServiceApi who works as a singleton { GetProductPromise, GetProductsPromise} 
@@ -79,9 +82,10 @@ NEXT_PUBLIC_API_URI=
 - In ProductRow I use `Array.from(new Set([category, ...subCategories].map(i => i.type)))` to make sure of dont have a duplicate category|subcategory
 - The General Idea was handle 2 differnts groups of products { SERVER-PRODUCTS & LOCAL-PRODUCTS } >
 ```SERVER-PRODUCTS => Products from endpoint
-LOCAL-PRODUCTS => Products from localStorage, this products can be deleted, the otherones no.```
+LOCAL-PRODUCTS => Products from localStorage, this products can be deleted, the otherones no.
+```
 
 ## Learn More
-- Time-Spent = 7 hours
+- Time-Spent = 10 hours
 - Time-Spent-pretends = 12 hours
 

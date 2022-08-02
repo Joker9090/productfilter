@@ -20,8 +20,8 @@ export interface ProductInterface {
   image: string;
 }
 
-export const buildCategoryTypeString = (v:number) => productTypeEnum[v];
-export const buildServerTypeString = (v:number) => serverTypeEnum[v];
+export const buildCategoryTypeString = (v: number) => productTypeEnum[v];
+export const buildServerTypeString = (v: number) => serverTypeEnum[v];
 
 export class ProductCategory {
   type: productTypeEnum;
@@ -64,11 +64,30 @@ export class Product {
 
   isFiltered(filterObject: FilterObject) {
     let r = true;
-    const check4Id = (fid: string) => {
-      if (this.id.indexOf(fid) !== -1) return true;
+    const check4Query = (q: string) => {
+      if (this.id.toLowerCase().indexOf(q.toLowerCase()) !== -1) return true;
+      if (this.title.toLowerCase().indexOf(q.toLowerCase()) !== -1) return true;
+      if (this.description.toLowerCase().indexOf(q.toLowerCase()) !== -1) return true;
       return false
     }
-    if (filterObject.id && filterObject.id !== "" && !check4Id(filterObject.id)) return false;
+    const check4Categories = (cs: string) => {
+      let all = [this.category, ...this.subCategories].map(c => `${c.type}`);
+      let selected = cs.split(",");
+      for (let i = 0; i < selected.length; i++) {
+        if (all.indexOf(selected[i].toString()) !== -1) return true;
+      }
+      return false
+    }
+    const check4ServerType = (st: string) => {
+      let all = [serverTypeEnum.LOCAL, serverTypeEnum.SERVER];
+      let selected = st.split(",");
+      if (selected.indexOf(this.serverType.toString()) !== -1) return true;
+      return false
+    }
+    if (filterObject.query && filterObject.query !== "" && !check4Query(filterObject.query)) return false;
+    if (filterObject.categories && filterObject.categories !== "" && !check4Categories(filterObject.categories)) return false;
+    if (filterObject.serverTypes && filterObject.serverTypes !== "" && !check4ServerType(filterObject.serverTypes)) return false;
+
     return r;
   }
 }

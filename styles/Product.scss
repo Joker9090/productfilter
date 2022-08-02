@@ -1,11 +1,33 @@
 .ProductRow {
+  transition: all 0.2s ease;
   margin: 14px auto !important;
   width: 100%;
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 0px;
   background: rgb(233, 233, 233);
   cursor: pointer;
   position: relative;
+  &:before {
+    transition: all 0.2s ease;
+    content: "";
+    left: -8px;
+    top: -8px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #e9e9e9;
+  }
+  &:after {
+    transition: all 0.2s ease;
+    content: "";
+    right: -8px;
+    bottom: -8px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: red;
+    z-index: 1;
+  }
+
   .ProductRowHover {
     padding: 0px;
     right: 0px;
@@ -22,6 +44,17 @@
     position: absolute;
   }
   &:hover {
+    &:before {
+      left: 0px;
+      width: 30px;
+      height: 30px;
+      top: 0px;
+    }
+    &:after {
+      opacity: 0;
+      right: -16px;
+      bottom: -16px;
+    }
     .ProductRowHover {
       opacity: 1;
     }
@@ -116,20 +149,49 @@
 /* Shimmer Logic */
 .ProductFilterShimer {
   .ShimerBox {
+    position: relative;
     width: 100%;
     height: 30px;
     background-color: grey;
-    border-radius: 2px;
   }
 }
 
 /* Shimmer Logic */
 .ProductListShimer {
   .ShimerBox {
+    position: relative;
+
+    &:before {
+      transition: all 0.2s ease;
+      content: "";
+      left: -8px;
+      top: -8px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: #e9e9e9;
+    }
+    &:after {
+      transition: all 0.2s ease;
+      content: "";
+      right: -8px;
+      bottom: -8px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: red;
+      z-index: 1;
+    }
+    position: relative;
     margin: 14px auto !important;
     width: 100%;
-    border-radius: 4px;
     background: rgb(233, 233, 233);
-    min-height: 200px;
+    min-height: 180px;
+    &:nth-child(2) {
+      opacity: 0.8;
+    }
+    &:nth-child(3) {
+      opacity: 0.4;
+    }
   }
 }

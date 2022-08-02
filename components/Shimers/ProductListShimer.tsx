@@ -11,10 +11,6 @@ export const ProductListShimer = () => {
             <ShimerBox />
             <ShimerBox />
             <ShimerBox />
-            <ShimerBox />
-            <ShimerBox />
-            <ShimerBox />
-            <ShimerBox />
           </Col>
         </Row>
       </Container>
@@ -23,5 +19,7 @@ export const ProductListShimer = () => {
 }
 
 const ShimerBox = () => (
-  <div className="ShimerBox" />
+  <div className="ShimerBox">
+    <div className="shimmer" />
+  </div>
 )

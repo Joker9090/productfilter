@@ -8,12 +8,15 @@ export const ProductFilterShimer = () => {
       <Container fluid={false} >
         <Row>
           <Col>
+            <label>-</label>
             <ShimerBox />
           </Col>
           <Col>
+            <label>-</label>
             <ShimerBox />
           </Col>
           <Col>
+            <label>-</label>
             <ShimerBox />
           </Col>
         </Row>
@@ -23,5 +26,7 @@ export const ProductFilterShimer = () => {
 }
 
 const ShimerBox = () => (
-  <div className="ShimerBox" />
+  <div className="ShimerBox">
+    <div className="shimmer" />
+  </div>
 )
