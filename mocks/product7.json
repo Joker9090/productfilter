@@ -1,1 +1,40 @@
-{"ProductInterface":{"id":"f16b29ff-d325-47d3-9655-7e9f79e78b16","serverType":1,"category":{"type":3},"subCategories":[{"type":3},{"type":1},{"type":0},{"type":3},{"type":3},{"type":3},{"type":3},{"type":4}],"price":87748,"description":"Enim sunt eos possimus. Aut cupiditate asperiores quae enim consequatur autem reprehenderit autem blanditiis.","title":"Necessitatibus mollitia ducimus aut asperiores est aspernatur consequatur aliquid expedita.","image":"Et consequuntur nemo."}}
+{
+  "ProductInterface": {
+    "id": "f16b29ff-d325-47d3-9655-7e9f79e78b16",
+    "serverType": 1,
+    "category": {
+      "type": 3
+    },
+    "subCategories": [
+      {
+        "type": 3
+      },
+      {
+        "type": 1
+      },
+      {
+        "type": 0
+      },
+      {
+        "type": 3
+      },
+      {
+        "type": 3
+      },
+      {
+        "type": 3
+      },
+      {
+        "type": 3
+      },
+      {
+        "type": 4
+      }
+    ],
+    "price": 87748,
+    "description": "Enim sunt eos possimus. Aut cupiditate asperiores quae enim consequatur autem reprehenderit autem blanditiis.",
+    "title": "Necessitatibus mollitia ducimus aut asperiores est aspernatur consequatur aliquid expedita.",
+    "image": "https://source.unsplash.com/random/200x100?sig=7"
+
+  }
+}

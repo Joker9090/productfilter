@@ -1,1 +1,21 @@
-{"ProductInterface":{"id":"129cf7e4-6959-4cd0-b419-8310aced6b8c","serverType":1,"category":{"type":4},"subCategories":[{"type":4},{"type":4}],"price":89106,"description":"Occaecati dolores eos consectetur cumque fuga qui aut consequuntur. Magni quis aliquam aut voluptatem iure vel nesciunt. Animi molestiae modi cupiditate corrupti maiores molestiae. Reiciendis et eum officia quia earum et aut ea sit.","title":"Repellat mollitia consequuntur ut et. Sit voluptates architecto alias libero dolor. Placeat quaerat sint.","image":"illum"}}
+{
+  "ProductInterface": {
+    "id": "129cf7e4-6959-4cd0-b419-8310aced6b8c",
+    "serverType": 1,
+    "category": {
+      "type": 4
+    },
+    "subCategories": [
+      {
+        "type": 4
+      },
+      {
+        "type": 4
+      }
+    ],
+    "price": 89106,
+    "description": "Occaecati dolores eos consectetur cumque fuga qui aut consequuntur. Magni quis aliquam aut voluptatem iure vel nesciunt. Animi molestiae modi cupiditate corrupti maiores molestiae. Reiciendis et eum officia quia earum et aut ea sit.",
+    "title": "Repellat mollitia consequuntur ut et. Sit voluptates architecto alias libero dolor. Placeat quaerat sint.",
+    "image": "https://source.unsplash.com/random/200x100?sig=8"
+  }
+}

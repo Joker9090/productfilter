@@ -1,1 +1,18 @@
-{"ProductInterface":{"id":"9d0de9c5-0c3b-473a-a4f6-8d5f9602a745","serverType":0,"category":{"type":0},"subCategories":[{"type":2}],"price":15868,"description":"Est numquam ea eos non.","title":"Enim tempore sed totam non animi ea nostrum quaerat. Nesciunt qui et. Nulla quasi temporibus.","image":"Est repudiandae sit perspiciatis nobis non. Aspernatur omnis non et quasi labore quis. Libero ut ipsa sed consequatur magni doloremque voluptate suscipit consequatur."}}
+{
+  "ProductInterface": {
+    "id": "9d0de9c5-0c3b-473a-a4f6-8d5f9602a745",
+    "serverType": 1,
+    "category": {
+      "type": 0
+    },
+    "subCategories": [
+      {
+        "type": 2
+      }
+    ],
+    "price": 15868,
+    "description": "Est numquam ea eos non.",
+    "title": "Enim tempore sed totam non animi ea nostrum quaerat. Nesciunt qui et. Nulla quasi temporibus.",
+    "image": "https://source.unsplash.com/random/200x100?sig=9"
+  }
+}

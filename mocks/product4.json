@@ -1,1 +1,42 @@
-{"ProductInterface":{"id":"148ae287-27b5-492c-9d36-a77f44832205","serverType":0,"category":{"type":0},"subCategories":[{"type":3},{"type":4},{"type":3},{"type":1},{"type":0},{"type":2},{"type":4},{"type":2},{"type":1}],"price":72746,"description":"Quibusdam est quis dolores dolor nulla.","title":"Dolor ut dolores consequuntur qui magni et. Dolorum eaque repellendus excepturi autem veritatis eos. Facilis rem dolores blanditiis minima. Consectetur provident neque. Exercitationem aut cupiditate.\n \rAccusamus natus ipsam sed. Voluptas veritatis eaque. Ullam iste ullam saepe rem adipisci. Cupiditate nulla ea adipisci.\n \rDolores neque odit maiores ullam et fugit qui. Sed et sunt labore assumenda labore voluptas qui incidunt odio. Facere explicabo laudantium qui sunt vitae hic. Quaerat eos id maiores dolorem error. Minima quia nemo esse dolores architecto quis suscipit dignissimos sapiente. Nobis qui eaque recusandae iste exercitationem in qui cum.","image":"Quo id mollitia dolorem. Sit voluptatibus ipsa rerum ratione harum esse corporis. Sapiente consequuntur expedita eveniet."}}
+{
+  "ProductInterface": {
+    "id": "148ae287-27b5-492c-9d36-a77f44832205",
+    "serverType": 1,
+    "category": {
+      "type": 0
+    },
+    "subCategories": [
+      {
+        "type": 3
+      },
+      {
+        "type": 4
+      },
+      {
+        "type": 3
+      },
+      {
+        "type": 1
+      },
+      {
+        "type": 0
+      },
+      {
+        "type": 2
+      },
+      {
+        "type": 4
+      },
+      {
+        "type": 2
+      },
+      {
+        "type": 1
+      }
+    ],
+    "price": 72746,
+    "description": "Quibusdam est quis dolores dolor nulla.",
+    "title": "Dolor ut dolores consequuntur qui magni et. Dolorum eaque repellendus excepturi autem veritatis eos. Facilis rem dolores blanditiis minima. Consectetur provident neque. Exercitationem aut cupiditate.\n \rAccusamus natus ipsam sed. Voluptas veritatis eaque. Ullam iste ullam saepe rem adipisci. Cupiditate nulla ea adipisci.\n \rDolores neque odit maiores ullam et fugit qui. Sed et sunt labore assumenda labore voluptas qui incidunt odio. Facere explicabo laudantium qui sunt vitae hic. Quaerat eos id maiores dolorem error. Minima quia nemo esse dolores architecto quis suscipit dignissimos sapiente. Nobis qui eaque recusandae iste exercitationem in qui cum.",
+    "image": "https://source.unsplash.com/random/200x100?sig=4"
+  }
+}

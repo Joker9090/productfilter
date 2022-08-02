@@ -13,7 +13,6 @@
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "intermock": "^0.2.5",
     "next": "12.2.3",

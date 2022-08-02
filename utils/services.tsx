@@ -8,6 +8,7 @@ import mockedProducts7 from '../mocks/product7.json';
 import mockedProducts8 from '../mocks/product8.json';
 import mockedProducts9 from '../mocks/product9.json';
 import { Product } from '../models/Product';
+
 const allProducts = [mockedProducts1, mockedProducts2, mockedProducts3, mockedProducts4, mockedProducts5, mockedProducts6, mockedProducts7, mockedProducts8, mockedProducts9,];
 
 export class ServiceApi {
@@ -20,7 +21,7 @@ export class ServiceApi {
         const productsFiltered = allProducts.filter(i => i.ProductInterface.id == id);
         if (productsFiltered.length) resolve(productsFiltered[0].ProductInterface);
         else return reject("NO ITEM FOUND")
-      }, 3000);
+      }, 1000);
     })
 
   }
@@ -29,12 +30,13 @@ export class ServiceApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(allProducts.map(m => m.ProductInterface))
-      }, 3000);
+      }, 2000);
     })
   }
 }
 
-const prefix = 'productFilter-';
+const prefix = 'productFilter';
+
 export class ServiceLocalApi {
   constructor() {
 
@@ -45,8 +47,29 @@ export class ServiceLocalApi {
     else return null;
   }
 
-  setProductFromLocal(product: Product) {
+  GetProductsFromLocal() {
+    const localItems: any = [];
+    const keys = Object.keys(localStorage);
+    let i = keys.length;
+    while (i--) {
+      if (keys[i].indexOf(prefix) === 0) {
+        localItems.push(this.GetProductFromLocal(keys[i].replace(`${prefix}-`, "")));
+      }
+    }
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(localItems)
+      }, 2000);
+    })
+  }
+
+  saveProductFromLocal(product: Product) {
+    product.serverType = 0;
     window.localStorage.setItem(`${prefix}-${product.id}`, JSON.stringify(product));
+  }
+
+  removeProductFromLocal(product: Product) {
+    window.localStorage.removeItem(`${prefix}-${product.id}`);
   }
 }
 

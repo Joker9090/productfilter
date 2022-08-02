@@ -71,12 +71,13 @@ export class Product {
       return false
     }
     const check4Categories = (cs: string) => {
+      let r = true;
       let all = [this.category, ...this.subCategories].map(c => `${c.type}`);
       let selected = cs.split(",");
       for (let i = 0; i < selected.length; i++) {
-        if (all.indexOf(selected[i].toString()) !== -1) return true;
+        if (all.indexOf(selected[i].toString()) === -1) r = false;
       }
-      return false
+      return r
     }
     const check4ServerType = (st: string) => {
       let all = [serverTypeEnum.LOCAL, serverTypeEnum.SERVER];

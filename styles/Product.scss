@@ -14,7 +14,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    background: #e9e9e9;
+    background: $color5;
   }
   &:after {
     transition: all 0.2s ease;
@@ -24,7 +24,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    background: red;
+    background: $color1;
     z-index: 1;
   }
 
@@ -63,15 +63,19 @@
   .ProductPartImage {
     width: 100%;
     height: 100%;
-    background: grey;
+    background: $color6;
     top: 0px;
     position: relative;
+    background-position: center;
+    background-size: cover;
     &:hover {
       .ProductPartId {
         opacity: 0.7;
       }
     }
     .ProductPartId {
+      font-size: 10px;
+
       transition: all 0.2s ease;
       position: absolute;
       color: white;
@@ -102,7 +106,7 @@
 }
 .ProductList,
 .ProductListShimer {
-  background: red;
+  background: white;
   height: $productsListSize;
   overflow-y: scroll;
   position: relative;
@@ -115,13 +119,13 @@
   display: flex;
   align-items: center;
   background: rgb(233, 233, 233);
-  border-radius: 4px;
   label {
     font-size: 12px;
   }
 }
 
 .Price {
+  color: #302e3b;
   span {
     font-weight: bold;
     &:nth-child(1) {
@@ -148,12 +152,19 @@
     min-height: 200px;
   }
   .ProductFilter {
+    padding-right: 6px;
     height: auto !important;
+    box-shadow: 0px 3px 5px #616161;
+    z-index: 2;
     & > .container > .row {
       display: flex;
       flex-direction: column-reverse;
-      & .col:nth-child(2) {
-        overflow: auto;
+      & .col:nth-child(2) .CoolSelector {
+        width: fit-content;
+        max-width: 100%;
+        .CoolSelectorActiveItem {
+          overflow-x: auto;
+        }
       }
     }
   }
@@ -169,7 +180,7 @@
     position: relative;
     width: 100%;
     height: 30px;
-    background-color: grey;
+    background-color: $color2;
   }
 }
 
@@ -196,7 +207,7 @@
       width: 20px;
       height: 20px;
       position: absolute;
-      background: red;
+      background: $color1;
       z-index: 1;
     }
     position: relative;
@@ -209,6 +220,33 @@
     }
     &:nth-child(3) {
       opacity: 0.4;
+    }
+  }
+}
+
+.ProductForm {
+  .ProductFormSectionServer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .ProductFormSection {
+    border-bottom: 1px solid rgba(93, 93, 93, 0.137);
+    width: 100%;
+    padding: 10px;
+    .CoolSelector {
+      width: fit-content;
+      max-width: 100%;
+      .CoolSelectorActiveItem {
+        overflow-x: auto;
+      }
+    }
+    textarea {
+      padding: 10px;
+      background-color: $color2;
+      border: none;
+      width: 100%;
+      resize: vertical;
     }
   }
 }

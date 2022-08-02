@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 5px;
   right: 5px;
+  z-index: 3;
   .MenuBtn {
     transition: all 0.2s ease;
     width: 40px;
@@ -10,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
+    background-color: $color6;
     font-size: 30px;
     font-weight: bold;
     color: white;

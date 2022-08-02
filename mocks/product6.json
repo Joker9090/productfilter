@@ -1,1 +1,19 @@
-{"ProductInterface":{"id":"66cb71a9-7fb3-4aab-a656-95b461efd473","serverType":0,"category":{"type":2},"subCategories":[{"type":1}],"price":97665,"description":"Aliquam et quo. Exercitationem iusto officia dignissimos tempore. In aut similique. Ut velit commodi aut. Dolorem laudantium quisquam officiis est minus ut voluptatem nesciunt a.","title":"Est in voluptas enim at.","image":"Qui corrupti necessitatibus eveniet magni rerum. Sunt fugit beatae ut non nobis facere."}}
+{
+  "ProductInterface": {
+    "id": "66cb71a9-7fb3-4aab-a656-95b461efd473",
+    "serverType": 1,
+    "category": {
+      "type": 2
+    },
+    "subCategories": [
+      {
+        "type": 1
+      }
+    ],
+    "price": 97665,
+    "description": "Aliquam et quo. Exercitationem iusto officia dignissimos tempore. In aut similique. Ut velit commodi aut. Dolorem laudantium quisquam officiis est minus ut voluptatem nesciunt a.",
+    "title": "Est in voluptas enim at.",
+    "image": "https://source.unsplash.com/random/200x100?sig=6"
+
+  }
+}

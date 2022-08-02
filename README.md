@@ -17,7 +17,7 @@
 - Cypress
 - styled
 - Docker
-- ![Intermock](https://github.com/google/intermock)
+- [Intermock](https://github.com/google/intermock)
 
 
 ## intermock
@@ -62,30 +62,24 @@ Create a local .env file with the following variables
 ```
 NEXT_PUBLIC_API_URI=
 ```
+
 ## TO IMPROVE
-- Colors
-- Images
-- Modal For Editing
-- Modal For Create
-- Positibility of delete LOCAL-PRODUCTS
-- Positibility of save LOCAL-PRODUCTS
-- Positibility of edit LOCAL-PRODUCTS
 - Test Cases  
-- Layout Options [
-  LEFT, CENTER, FULL SCREEN
-  - sort of dashboard concept in the back
-]
+
 
 ## Coments 
 - The Mock Service is in service.tsx file > Inside there is a Class ServiceApi who works as a singleton { GetProductPromise, GetProductsPromise} 
 - Running `make mock` will generate new 9 mocked files inside mock folder, but I change image src for make ProductRow prittier
 - In ProductRow I use `Array.from(new Set([category, ...subCategories].map(i => i.type)))` to make sure of dont have a duplicate category|subcategory
-- The General Idea was handle 2 differnts groups of products { SERVER-PRODUCTS & LOCAL-PRODUCTS } >
+- The General Idea was handle 2 differents groups of products { SERVER-PRODUCTS & LOCAL-PRODUCTS } >
 ```SERVER-PRODUCTS => Products from endpoint
 LOCAL-PRODUCTS => Products from localStorage, this products can be deleted, the otherones no.
 ```
+- The data is persisted in localStorage. Saving an edit or create a new registry will create a new localStorage data to persist this change. If you want to view this data, just filter for LOCAL in the server type filter.
+- All handmade components, No extra dependecies!! {Selector || Buttons}
+- There is a icon-cog up in the right corner to change layout !
 
 ## Learn More
-- Time-Spent = 10 hours
+- Time-Spent = 13 hours
 - Time-Spent-pretends = 12 hours
 

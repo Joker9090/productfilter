@@ -3,3 +3,14 @@ $filterSize: 60px;
 $headerPlusFilter: calc(#{$headerSize} + #{$filterSize});
 $layoutSize: calc(100vh - #{$headerSize});
 $productsListSize: calc(100vh - #{$headerPlusFilter});
+
+$color1: #e9dedc;
+$color2: #c4b5b6;
+$color3: #4e5d54;
+$color4: #3b3034;
+$color5: #302e3b;
+$color6: #18bbed;
+
+.c-white {
+  color: white;
+}
