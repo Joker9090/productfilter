@@ -10,6 +10,7 @@ import { ProductFilterShimer } from '../components/Shimers/ProductFilterShimer';
 import { ProductListShimer } from '../components/Shimers/ProductListShimer';
 import { getProduct, getProducts, MainReduxActions, filterProducts, removeProduct, setProduct } from '../redux/actions/main';
 import { MainReduxState, ServerFetching } from '../redux/reducers/main';
+import { useRouter } from 'next/router'
 import { Product } from '../models/Product';
 
 const mapStateToProps = (state: { main: MainReduxState }) => {
@@ -31,7 +32,9 @@ const mapDispatchToProps = {
   removeProduct,
 }
 
-const Home = ({ key, productsStatus, productStatus, filterObject, activeProduct, products, getProduct, getProducts, filterProducts }: MainReduxState & MainReduxActions & { key: string | null }) => {
+const Home = ({ productsStatus, productStatus, filterObject, activeProduct, products, getProduct, getProducts, filterProducts }: MainReduxState & MainReduxActions) => {
+  const router = useRouter();
+  const { key } = router.query;
 
   React.useEffect(() => {
     if (key) {

@@ -72,7 +72,6 @@ const main = (state = GlobalState, action: any) => {
       let categoriesOptions = "";
       products.forEach(product => (categoriesOptions += `${[product.subCategories.map(s => s.type), product.category.type].join(",")},`))
       filterObject.categoriesOptions = Array.from(new Set(categoriesOptions.slice(0, -1).split(","))).join(",");
-      console.log(filterObject)
       return {
         ...state,
         filterObject: { ...filterObject },

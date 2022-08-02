@@ -1,0 +1,28 @@
+.Menu {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  .MenuBtn {
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2;
+    bottom: 0px;
+    right: 0px;
+    &:hover {
+      width: 60px;
+      height: 60px;
+      bottom: -10px;
+      right: -10px;
+    }
+  }
+}

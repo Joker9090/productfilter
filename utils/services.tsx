@@ -7,21 +7,22 @@ import mockedProducts6 from '../mocks/product6.json';
 import mockedProducts7 from '../mocks/product7.json';
 import mockedProducts8 from '../mocks/product8.json';
 import mockedProducts9 from '../mocks/product9.json';
+import { Product } from '../models/Product';
 const allProducts = [mockedProducts1, mockedProducts2, mockedProducts3, mockedProducts4, mockedProducts5, mockedProducts6, mockedProducts7, mockedProducts8, mockedProducts9,];
 
-export default class ServiceApi {
+export class ServiceApi {
   constructor() {
 
   }
   GetProductPromise(id: string) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const productsFiltered = allProducts.filter(i => i.ProductInterface.id.indexOf(id) !== -1);
-        if (productsFiltered.length) resolve(productsFiltered[0]);
+        const productsFiltered = allProducts.filter(i => i.ProductInterface.id == id);
+        if (productsFiltered.length) resolve(productsFiltered[0].ProductInterface);
         else return reject("NO ITEM FOUND")
       }, 3000);
     })
-    
+
   }
 
   GetProductsPromise() {
@@ -32,3 +33,20 @@ export default class ServiceApi {
     })
   }
 }
+
+const prefix = 'productFilter-';
+export class ServiceLocalApi {
+  constructor() {
+
+  }
+  GetProductFromLocal(id: string) {
+    const item = window.localStorage.getItem(`${prefix}-${id}`);
+    if (item) return JSON.parse(item);
+    else return null;
+  }
+
+  setProductFromLocal(product: Product) {
+    window.localStorage.setItem(`${prefix}-${product.id}`, JSON.stringify(product));
+  }
+}
+

@@ -28,7 +28,13 @@ a {
 .layout {
   height: $layoutSize;
   position: relative;
+  &main {
+    height: calc(100vh - 40px);
+    overflow: hidden;
+  }
 }
+
+
 .pushed {
   display: flex;
   justify-content: end;
@@ -55,4 +61,14 @@ a {
   100% {
     -webkit-mask-position: left;
   }
+}
+
+
+/* Mobile Configuration */
+@media screen and (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
 }

@@ -1,10 +1,10 @@
 import { Product } from "../../models/Product";
 import * as t from "../types";
-import ServiceApi from '../../utils/services';
+import { ServiceApi, ServiceLocalApi } from '../../utils/services';
 import { FilterObject } from "../reducers/main";
 
 const Api = new ServiceApi(); // Singleton Api
-
+const ApiLocal = new ServiceLocalApi(); // Singleton Api
 export type MainReduxActions = {
   getProducts: Function,
   getProduct: Function,
@@ -14,14 +14,27 @@ export type MainReduxActions = {
 }
 
 export const getProduct = (id: string) => (dispatch: any) => {
+  console.log("getProduct")
   dispatch({ type: t.FETCHING_PRODUCT });
-  const productsPromise = Api.GetProductPromise(id);
-  productsPromise.then((result) => {
-    const product = new Product((result as Product));
-    dispatch({
-      type: t.GET_PRODUCT,
-      payload: product,
-    });
+  const productPromise = Api.GetProductPromise(id);
+  const productFromLocal = ApiLocal.GetProductFromLocal(id);
+  productPromise.then((result) => {
+    console.log("result", result);
+    let product
+    if (productFromLocal) {
+      product = productFromLocal;
+    }
+    if (result) {
+      product = new Product((result as Product));
+    }
+    if (product) {
+      dispatch({
+        type: t.GET_PRODUCT,
+        payload: product,
+      });
+    } else {
+      dispatch({ type: t.FETCH_PRODUCT_ERROR });
+    }
   }).catch(e => {
     dispatch({ type: t.FETCH_PRODUCT_ERROR });
   })
