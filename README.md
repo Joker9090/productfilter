@@ -5,7 +5,7 @@
 [Demo](https://productfilter.vercel.app/)
 
 ## Concept Diagram
-![DiagramImage](https://github.com/Joker9090/productfilter/blob/main/public/baseDiagramConcept.pngraw=true)
+![DiagramImage](https://github.com/Joker9090/productfilter/blob/master/public/baseDiagramConcept.png?raw=true)
 
 
 ## Stack
