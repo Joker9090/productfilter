@@ -20,8 +20,8 @@ export const getSetsOfSubCategoryProduct = (product: Product) => {
 export const getCategoriesFromFilterObject = (filterObject: FilterObject, withOptions: boolean = true) => {
   let categories = "";
   if(filterObject.categories !== "") categories = filterObject.categories;
-  if(withOptions && filterObject.categoriesOptions != "") categories = (categories == "") ? filterObject.categoriesOptions : `${categories},${filterObject.categoriesOptions}`;
-  return Array.from(new Set(categories.split(",")));
+  if(withOptions && filterObject.categoriesOptions !== "") categories = (categories == "") ? filterObject.categoriesOptions : `${categories},${filterObject.categoriesOptions}`;
+  return categories != "" ? Array.from(new Set(categories.split(","))) : [];
 }
 
 export const buildCoolItemFromCategory = (category: string, checkIfActive: Function | null) => {
