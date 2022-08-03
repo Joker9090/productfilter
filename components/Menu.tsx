@@ -8,7 +8,7 @@ const Menu = ({ createNew }: { createNew: Function }) => {
 
 const MenuBtn = ({ inside, onClick }: { inside: string, onClick: Function }) => {
   return (
-    <div className="MenuBtn" onClick={() => onClick()}>
+    <div className="MenuBtn" data-cy="cy-create-registry" onClick={() => onClick()}>
       <span>{inside}</span>
     </div>
   )

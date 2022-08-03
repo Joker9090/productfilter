@@ -9,7 +9,7 @@ import { ServerLabel } from './ServerLabel';
 export const ProductRow = ({ product, setActiveProduct }: { product: Product, setActiveProduct: Function }) => {
   const { id, title, description, price, image, serverType } = product;
   return (
-    <Row className="ProductRow" onClick={() => setActiveProduct(product)}>
+    <Row className="ProductRow" data-cy="cy-ProductRow" onClick={() => setActiveProduct(product)}>
       <div className="ProductRowHover" />
       <Col xs={12} md={4} className="p-0 m-0">
         <div className="ProductPartImage" style={{backgroundImage: `url(${image})`}}>

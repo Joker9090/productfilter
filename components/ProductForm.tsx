@@ -38,7 +38,7 @@ const ProductForm = ({ product, onChange }: { product: Product, onChange: Functi
     <div className="ProductForm">
       <div className="ProductFormSection">
         <label>Title</label>
-        <textarea onChange={(e) => change('title', e.target.value)} defaultValue={product.title}></textarea>
+        <textarea data-cy="cy-modal-title" onChange={(e) => change('title', e.target.value)} defaultValue={product.title}></textarea>
       </div>
       <div className="ProductFormSection">
         <label>Category</label>
@@ -49,22 +49,22 @@ const ProductForm = ({ product, onChange }: { product: Product, onChange: Functi
         <CoolSelector onlyOne={false} className={""} writing={true} items={subcategoryItems} onClick={selectSubCategory} />
       </div>
       <div className="ProductFormSection">
-        <label>Cescription</label>
+        <label>Description</label>
         <textarea onChange={(e) => change('description', e.target.value)} defaultValue={product.description}></textarea>
       </div>
       <div className="ProductFormSection">
-        <label>Price</label>
+        <p>Price</p>
         <input type="number" onChange={(e) => change('price', e.target.value)} defaultValue={product.price}></input>
       </div>
       <div className="ProductFormSection ProductFormSectionServer">
-        <ServerLabel value={product.serverType} onClick={null} />
         <div className="">
-          {(product.serverType == serverTypeEnum.LOCAL) ? (
+          {(product.serverType == serverTypeEnum.SERVER) ? (
             <label>Saving data will convert to a LOCAL server Type</label>
           ) : (
             <label>Deleting data will remove only LOCAL data for this id</label>
           )}
         </div>
+        <ServerLabel value={product.serverType} onClick={null} />
       </div>
     </div>
   )

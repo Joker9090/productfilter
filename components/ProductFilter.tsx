@@ -41,7 +41,7 @@ export const ProductFilter = ({ filterObject, filterProducts }: { filterObject: 
         <Row>
           <Col>
             <label>id, title, description</label>
-            <input className="w-100" type="text" onChange={(event) => filterProducts({ ...filterObject, query: event.target.value })} />
+            <input data-cy="cy-query-search" className="w-100" type="text" onChange={(event) => filterProducts({ ...filterObject, query: event.target.value })} />
           </Col>
           <Col>
             <label>category, subCategories</label>

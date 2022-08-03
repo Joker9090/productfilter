@@ -2,11 +2,11 @@
 
 
 ## Demo link 
-[Demo](https://Wait-Link/)
-
+[Demo](https://productfilter.vercel.app/)
 
 ## Concept Diagram
-![DiagramImage](https://Wait-Link/)
+![DiagramImage](https://github.com/Joker9090/productfilter/blob/main/public/baseDiagramConcept.pngraw=true)
+
 
 ## Stack
 - node 16.13.1
@@ -60,11 +60,14 @@ First, run the development server:
 ## Configure Env File
 Create a local .env file with the following variables
 ```
-NEXT_PUBLIC_API_URI=
+NEXT_PUBLIC_VAR=
 ```
 
 ## TO IMPROVE
-- Test Cases  
+- More Test Cases  
+- Shimmers in more things
+- Blem Modal UI
+- Image Optimization  
 
 
 ## Coments 
@@ -80,6 +83,6 @@ LOCAL-PRODUCTS => Products from localStorage, this products can be deleted, the 
 - There is a icon-cog up in the right corner to change layout !
 
 ## Learn More
-- Time-Spent = 13 hours
+- Time-Spent = 14 hours
 - Time-Spent-pretends = 12 hours
 

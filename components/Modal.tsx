@@ -34,7 +34,7 @@ export default Modal;
 
 export const ModalButton = ({ text, onClick }: { text: string, onClick: Function }) => {
   return (
-    <div className="ModalButton" onClick={() => onClick()}>
+    <div className="ModalButton" data-cy="cy-modal-btn" onClick={() => onClick()}>
       <p>{text}</p>
     </div>
   )
