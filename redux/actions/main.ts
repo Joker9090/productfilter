@@ -2,6 +2,7 @@ import { Product } from "../../models/Product";
 import * as t from "../types";
 import { ServiceApi, ServiceLocalApi } from '../../utils/services';
 import { FilterObject } from "../reducers/main";
+import { buildNewFilter } from "../../utils/helpers";
 
 const Api = new ServiceApi(); // Singleton Api
 const ApiLocal = new ServiceLocalApi(); // Singleton Api
@@ -113,7 +114,8 @@ export const getProducts = () => (dispatch: any, getState: any) => {
       type: t.GET_PRODUCTS,
       payload: [...productsMixed],
     });
-    dispatch(filterProducts(state.filterObject))
+    const filterObject0 = buildNewFilter(state.filterObject as FilterObject, [...productsMixed]);
+    dispatch(filterProducts({ ...filterObject0 }))
   }).catch(e => {
     dispatch({ type: t.FETCH_PRODUCTS_ERROR });
   })

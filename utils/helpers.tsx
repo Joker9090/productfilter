@@ -32,3 +32,12 @@ export const buildCoolItemFromServerType = (category: string, checkIfActive: Fun
   return ({ value: category, label: buildServerTypeString(Number(category)), isActive: checkIfActive ? checkIfActive(category) : false, colorClass: "" })
 }
 
+export const buildNewFilter = (filterObject: FilterObject, products: Product[]) => {
+  const _filterObject = { ...filterObject };
+  let categoriesOptions = "";
+  products.forEach(product => (categoriesOptions += `${[product.subCategories.map(s => s.type), product.category.type].join(",")},`));
+  categoriesOptions = categoriesOptions.slice(0, -1);
+  _filterObject.categoriesOptions = Array.from(new Set(categoriesOptions.split(","))).filter(i => _filterObject.categories.split(",").indexOf(i) === -1).join(",");
+  console.log("_filterObject.categoriesOptions", _filterObject.categoriesOptions)
+  return _filterObject;
+}
